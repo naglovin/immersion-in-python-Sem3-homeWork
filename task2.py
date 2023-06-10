@@ -35,3 +35,32 @@ for word in text.split():                         # разбиваем стро�
 counter_dict = tuple(sorted(counter_dict.items(), key=lambda item: item[1]))
 for index, word in enumerate(counter_dict[-1:-10:-1], 1):
     print(f'{index}. {word[0]:>10} {word[1]} раз')
+
+# for i in range(len(text)):
+#     if text[i].istitle():
+#         text[i] = text[i].lower()
+#     if "." in text[i]:
+#         text[i] = text[i].replace(".", "")
+#     if "," in text[i]:
+#         text[i] = text[i].replace(".", "")
+#
+# temp_dict = dict()
+# for item in text:
+#     key = temp_dict.setdefault(item, text.count(item))
+#
+# values = temp_dict.values()
+# sorted_values = list(sorted(values, reverse=True))
+#
+# result = {}
+# top = 10
+#
+# for value in sorted_values:
+#     for element in temp_dict.keys():
+#         if temp_dict[element] == value:
+#             if element not in result:
+#                 result[element] = temp_dict[element]
+#                 top -= 1
+#                 break
+#     if top <= 0: break
+#
+# print(result)
