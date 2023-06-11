@@ -32,8 +32,8 @@ counter_dict = {}                               # создаем словарь
 for word in text.split():                         # разбиваем строки( будут такого вида ['Пример', 'строки', 'Python']
     counter_dict[word] = counter_dict.get(word, 0) + 1
 
-counter_dict = tuple(sorted(counter_dict.items(), key=lambda item: item[1]))
-for index, word in enumerate(counter_dict[-1:-10:-1], 1):
+counter_dict = sorted(counter_dict.items(), key=lambda item: item[1], reverse=True)[:10]
+for index, word in enumerate(counter_dict, 1):
     print(f'{index}. {word[0]:>10} {word[1]} раз')
 
 # for i in range(len(text)):
