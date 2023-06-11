@@ -26,7 +26,7 @@ result = []
 for elements in things:
     if backpack > things[elements]:
         result.append(elements)
-        backpack = backpack - int(things[elements])
+        backpack = backpack - things[elements]
     else: break
 print(result)
 
